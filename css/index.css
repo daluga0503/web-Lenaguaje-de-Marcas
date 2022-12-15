@@ -1,0 +1,574 @@
+/**********************************************************************************************/
+/*    Web de Londres - hoja de estilo de index                                         */
+/*   Autor: Daniel Luque Gallardo                                                           */
+/*     Versión 1.0 - 26/11/2022                                                            */
+/******************************************************************************************/
+
+/****************** Estilo general *****************************************************/
+
+@font-face {
+  font-family: titulo;
+  src: url(../fonts/Railway-PlyE.otf);
+}
+
+@font-face {
+  font-family: texto;
+  src: url(../fonts/FiraSans-Light.ttf);
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  box-sizing: border-box;
+}
+
+body a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.titulo-seccion {
+  font-weight: titulo;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(168, 121, 71);
+  padding: 4% 0;
+  margin-top: 20;
+  background-color: rgb(199, 173, 161);
+}
+
+.subtitulo {
+  text-align: center;
+  font-family: texto;
+  /* background-color: #ddd; */
+  /* height: 80px; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid rgb(147, 145, 145);
+}
+
+/************************************ Barra de navegacion ***************************************************/
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  opacity: 0.8;
+}
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+/* Descativado por que no lo vamos a progrmar asin
+  /* .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  } */
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/*****************************************************************************************/
+
+#hero {
+  background-image: url(../images/londresfoton.jpg);
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding-top: 20px;
+  font-family: titulo;
+  font-size: 3.3rem;
+}
+
+#titulo {
+  background-color: rgb(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px); /*  al fondo le aplico un filtro blur */
+  text-align: center;
+  width: 30%;
+  height: 10%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20%;
+  border-radius: 20px;
+}
+/*****************************************  Localización *******************************************************/
+.grid2 {
+  display: grid;
+  grid-template-columns: 50% 50%; /***** tmb pueder ser con auto****/
+}
+
+.texto {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20%;
+  font-size: 1.5rem;
+  font-family: texto;
+}
+
+.col2 img {
+  width: 100%;
+  height: 100%;
+}
+
+/*********************************  cultura  **********************************************/
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 50% 50%; /***** tmb pueder ser con auto****/
+}
+
+.texto2 {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10%;
+  font-size: 1.5rem;
+  font-family: texto;
+}
+
+.col3 img {
+  width: 100%;
+  height: 100%;
+}
+
+/************************************  Turismo **********************************************/
+
+
+.grid4 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.col4 {
+  padding: 4%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+.card img {
+  width: 92%;
+  margin: 4%;
+  border-radius: 20%;
+}
+.card img {
+  width: 90%;
+  opacity: 0.7;
+  transition: 1s;
+  padding: 4%;
+}
+.card img:hover {
+  opacity: 1;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  text-align: center;
+}
+
+.card a {
+  text-decoration: none;
+  font-weight: bold;
+  background-color: gray;
+  padding: 10px;
+  color: #f1f1f1;
+  display: inline-block;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+
+.card a:hover {
+  background-color: rgb(165, 164, 164);
+  color: black;
+}
+
+/****************************  Gastronomia  ********************************************/
+
+.contenedor {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta-contenedor {
+  margin: 30px;
+  -webkit-perspective: 800;
+  perspective: 800;
+}
+
+.tarjeta {
+  width: 300px;
+  height: 350px;
+  background: rgb(147, 145, 145);
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+  -webkit-box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+}
+
+.adelante,
+.atras {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.adelante {
+  width: 100%;
+}
+
+.atras {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "open sans";
+  background: rgb(147, 145, 145);
+}
+
+.tarjeta-contenedor:hover .tarjeta {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card1 {
+  background-image: url(../images/fishandchips.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card2 {
+  background-image: url(../images/sunday2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card3 {
+  background-image: url(../images/banager.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/************************** galeria******************************/
+
+.container-gallery {
+  padding: 2px 16px;;
+  text-align: center;
+  border-radius: 100%;
+}
+
+#boton{
+  margin: 5% 5% 5% 5%;
+  font-family: texto;
+  font-size: 2.5rem;
+  background-color: gainsboro;
+  border-radius: 30%;
+}
+
+
+
+
+
+
+
+/**************************************** Footer ********************************************/
+footer{
+  height: 100%;
+}
+
+#contacto{
+  background-image: linear-gradient(to bottom right, #c7ada1, white);
+}
+
+.grid5 {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  /* background-image: linear-gradient(to bottom right, #c7ada1, white); */
+  height: 100%;
+}
+
+.col5 texto{
+  justify-content: center;
+}
+
+.col5-ref{
+  text-align: center;
+  justify-content: left center;
+  margin-top: 8%;
+  padding-top: 10%;
+  margin-bottom: 5%;
+  border-left: 2px solid rgb(147, 145, 145);
+}
+
+
+.col5-contacto{
+  text-align: center;
+  justify-content: left;
+  margin-top: 8%;
+  margin-bottom: 5%;
+  border-left: 2px solid rgb(147, 145, 145);
+}
+
+
+.col5 iframe {
+  width: 70%;
+  height: 100%;
+  display: block;
+  margin: auto;
+  margin-left: 100px;
+
+}
+
+.fa {
+  padding: 15px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  border-radius: 100%;
+  width: 30px;
+}
+
+#contacta{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 2px solid rgb(147, 145, 145);
+}
+
+
+
+#git{
+  font-size: 3.5rem;
+}
+/***************************  media quaries ***********************************/
+
+@media only screen and (width<=1000px) {
+  #titulo-seccion {
+    font-size: 3;
+  }
+
+  .texto{
+    margin-top: 5%;
+  }
+
+  #titulo {
+    width: 50%;
+  }
+
+  .grid4 {
+    grid-template-columns: 50% 50%;
+  }
+
+  .tarjeta {
+    width: 170px;
+    height: 250px;
+  }
+
+  .tarjeta-contenedor {
+    margin: 20px;
+  }
+
+  #boton{
+    font-family: texto;
+    font-size: 2rem;
+    background-color: gainsboro;
+    border-radius: 30%;
+  }
+  
+}
+
+/************************* media queries movil ************************/
+
+@media only screen and (width<=600px) {
+  #titulo {
+    width: 80%;
+  }
+  .titulo-seccion{
+    font-size: 2.5rem;
+  }
+
+  .subtitulo{
+    font-size: 0.75rem;
+  }
+
+  .grid4 {
+    grid-template-columns: 100%;
+  }
+  .contenedor {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .tarjeta {
+    width: 400px;
+    height: 300px;
+  }
+
+  .tarjeta-contenedor {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .col2 img {
+    width: 100%;
+    height: 100%;
+    
+  }
+  .col3 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .texto{
+    font-size: 0.5rem ;
+      margin-top: -1%;
+  }
+
+  .texto2{
+    font-size: 0.5rem;
+    margin-top: -1%;
+  }
+
+  .grid5{
+    grid-template-columns: 100%;
+  }
+
+  .col5 iframe{
+    margin-left:30%;
+  }
+
+  .col5-ref{
+    text-align: center;
+    justify-content: left center;
+    margin-top: 8%;
+    padding-top: 10%;
+    margin-bottom: 5%;
+    border-left: 2px solid rgb(220, 203, 196);
+  }
+  
+  
+  .col5-contacto{
+    text-align: center;
+    justify-content: left;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    border-left: 2px solid rgb(220, 203, 196);
+  }
+
+  .col5{
+    justify-content: center;
+    margin-right: 20%;
+  }
+  #boton{
+    font-family: texto;
+    font-size: 1.5rem;
+    background-color: gainsboro;
+    border-radius: 30%;
+  }
+  
+
+}
+
+
+
+
+/********************* barra de navegación ********************************/
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
